@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+// TODO: connect to redux with useSelector
 
 const AllEmotions = () => {
   const [emotions, setEmotions] = useState([]);
@@ -6,7 +7,7 @@ const AllEmotions = () => {
   if (!emotions.length)
     setError("There are no emotions, yet.")
   return (
-    {error &&
+    {errorMsg &&
      <div>{errorMsg}</div>
     }
     {emotions.length && 
